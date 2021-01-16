@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="cian">
+<style>
+
+    h1 { margin : auto ;
+
+    padding : 5px ;
+         border : 1px solid black ;}
+     div { margin : auto ;
+      margin-left : 300px ;
+      margin-right : 300px ;
+     padding : 20px ;
+      border : 1px solid black ;}
+    input{ width : 100% ;
+          padding : 5px 5px;
+          box-sizing : border-box}
+     label{ text-sizing : 2px;}
+
+</style>
+
+<form method="post" enctype="multipart/form-data">
+    <h1 align="center"> MOBILE DETALES </h1><br> <br>
+    {% csrf_token %}
+    <div>
+    <label class="bing">1.Enter Brand Name :</label><br>
+    <input type="text" name="brand" size="50" class="mo" placeholder="Enter Brand Name"><br><br>
+    <label>2.Enter Product Name :</label><br>
+    <input type="text" size="50" name="name"><br><br>
+    <label>3.Enter Price : </label><br>
+    <input type="text" name="price" size="50" ><br><br>
+    <label>4.Enter Features :</label><br>
+    <input type="text" size="50" name="feature" ><br><br>
+    <label>5.Enter Mobile Number : </label><br>
+    <input name="mobile" size="50" type="text"> <br><br>
+    <label>6.Upload Photo Of Mobile : </label><br>
+
+    <input type="file" name="pic" accept="images/*"><br><br><br>
+    <button type="submit">submit</button>
+    </div>
+</form>
+
+</body>
+</html>

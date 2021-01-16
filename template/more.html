@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+input {  width : 40%;
+        padding : 5px ;
+        border-radius : 12px 0px 0px 12px;
+        border : 1px solid black;
+        transition : .5s ;}
+    div { margin : auto;
+          margin-top : 50px;
+          margin-left : 100px;
+          margin-right : 100px;
+          padding : 2px ;
+          border : 2px solid black ;
+          overflow : auto ;
+          background-color : white ;
+          font-family: Tahoma, Verdana, sans-serif;}
+      p{ margin : auto ;
+          margin-top : 10px;
+         margin-left : 50px;
+         margin-right : 50px;
+         border-bottom : 2px solid black ;
+         overflow : auto ;}
+      .king {float : right;
+              margin : auto ;
+              margin-bottom : 20px;}
+      button { font-family : italic ;
+      font-size : 20px ;
+               border-radius : 0px 12px 12px 0px;
+
+               margin-top : 5px;
+               border : 1px solid black ;}
+        button:hover { font-family : italic ;
+        background-color : black;
+                        color : white ;
+                        border : 2px solid black;}
+</style>
+<body bgcolor="#A9E2F3">
+  <form method="post">
+        {% csrf_token %}
+       <label >Enter Product Name</label>
+        <input type="text" name="Brand" placeholder="Search Product Name">
+        <button type="submit" > Search </button>
+  </form>
+  <div>
+    {% for Ecommerce in ser %}
+      <p>name = {{Ecommerce.Name}}<br>
+    price = {{Ecommerce.price}}<br>
+    brand = {{Ecommerce.Brand}}<br>
+    features = {{Ecommerce.features}}<br>
+          <img src="{{ Ecommerce.image.url }}" class="king"><br></p>
+    {% endfor %}
+  </div>
+</body>
+</html>

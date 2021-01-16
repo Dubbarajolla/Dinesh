@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proile</title>
+</head>
+<style>
+    .vi { text-align : center ;
+    padding : 2px ;
+           border : 5px solid green;
+           overflow : auto ;
+           border-radius : 20px;
+           margin : auto ;
+           margin-left : 300px ;
+           margin-right : 300px;
+           margin-top : 50px;
+
+           }
+    .img { float : center;
+            padding :2px ;
+            border : 5px solid black ;
+            width : 155px;
+           height : 155px ;}
+      h1{text-align : center ;
+      padding : 15px ;
+          border : 2px solid black ;}
+</style>
+<body>
+  <div class="vi">
+      <h1>Profile Detailes</h1>
+     First Name : {{ user.first_name }}<br>
+     Last Name : {{ user.last_name }}<br>
+     Last LogIn : {{ user.last_login }}<br>
+     Date Joined : {{ user.date_joined }}<br><br>
+     <img src= "{{ user.Image.url }}"><br><br>
+       <img src="static/{{file}}" class="img" alt="you'r Qr"><br>
+  </div>
+</body>
+</html>

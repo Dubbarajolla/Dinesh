@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+   h4 { float : center ;}
+    div { margin : auto ;
+         margin-left : 400px;
+         margin-right : 300px;
+    padding : 5px ;
+          border : 1px solid black;
+          height : 450px ;
+          width : 440px ;
+          float : center ;
+          text-align : center ;
+
+          overflow : auto ;}
+     .ni {
+           width : 385px;}
+
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h4 align="center">
+   <div>
+     {% for SuperUser in data %}
+     <label>Name : {{ SuperUser.last_name }} </label><br><br>
+     Age : {{ SuperUser.age }} <br>
+     <img src="{{ SuperUser.Photo.url }}" class="ni">
+      {% endfor %}
+   </div>
+    </h4>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="POST">
+    {% csrf_token %}
+   <h1 align="center" >Qr Generater</h1>
+   <label> Enter Details Hear :</label><br>
+   <input type="text" name="data" size="50" placeholder="Create You'r Own Qr Heare"><br><br>
+    <label>See your Qr code</label>
+    <input type="submit">
+          <img src=" static/{{v}} ">
+        <img src=" static/{{file}} ">
+</form>
+</body>
+</html>

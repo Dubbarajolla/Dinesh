@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    .otp { float : center ;
+           padding: 25px;
+           background-color: lightblue;
+           border : 2px solid black ;
+           margin : auto ;
+           margin-left : 250px ;
+           margin-right : 250px;
+           margin-top : 100px ;
+           }
+      .r:hover { background-color : green ;
+                   color : black ; }
+       input { padding : 8px ;
+                width : 65%;}
+
+</style>
+<body>
+<form method="POST" class="otp">
+    {% csrf_token %}
+    <h2 align="center"><label>welcome :{{user.first_name}}</label> <label>{{user.last_name}}</label></h2>
+  <h2 align="center"><label>OTP : </label>
+ <input type="text" placeholder="Enter OTP" name="OTP" required size="50">
+      <button type="submit" class="r">submit</button></h2>
+</form>
+</body>
+</html>

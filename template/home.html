@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+h1 { padding-right : 10px;
+    padding-top : 10px;
+    padding-bottom: 10px;
+    padding-left : 10px;
+    text-decoration : none;
+    margin : 0;
+    background-color : yellow;
+    text-color : black;}
+h1 a { text-decoration : none}
+
+
+   div ul {
+         border : 1px solid black ;
+          list-style-type : none ;
+          overflow : hidden ;
+          background-color : blue;}
+   li a {
+  display: block;
+  color: white;
+  text-align: center;
+   padding : 14px 16px;
+  text-decoration : none;}
+li {float : left ;}
+li:hover { background-color : red ;
+            color : white ;}
+
+</style>
+<body bgcolor="white black">
+{{a}}
+
+
+<h1>{{ user.first_name}}</h1>
+<h4 align="center">welcome {{user.first_name}}</h4>
+<h1 align="center" > Mobile Phones <a href="logout" style="float:right">Logout</a> </h1>
+
+  <div>
+      <ul>
+
+          <li><a href="redmi" >Redmi Note 9 Pro</a></li>
+          <li><a href="Narzo">Realme Narzo 20</a></li>
+          <li><a href="Note20">Samsung Note 20</a></li>
+      </ul>
+  </div>
+
+
+    <a href="diwali">DIWALI</a>
+</body>
+</html>
+

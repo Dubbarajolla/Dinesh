@@ -1,0 +1,28 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<dev>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+    <label>Enter Name</label><br>
+        <input name="Pname" type="text" size="40"><br>
+
+        <input name="img" type="file"><br>
+        <input type="submit"><br>
+
+    {% for my_image in pic %}
+      name = {{my_image.Name}} <br>
+
+      Image = <img src= "{{my_image.image.url}}" ><br>
+    {% endfor %}
+    </form>
+
+</dev>
+
+</body>
+</html>
